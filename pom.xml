@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wilsonality</groupId>
-	<artifactId>animalsCrudAPI</artifactId>
+	<artifactId>animalscrudapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>animalsCrudAPI</name>
+	<name>animalscrudapi</name>
 	<description>CSC340 assignment. Implementing a CRUD with Spring</description>
 	<url/>
 	<licenses>

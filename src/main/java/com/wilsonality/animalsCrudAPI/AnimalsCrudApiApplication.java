@@ -1,4 +1,4 @@
-package com.wilsonality.animalsCrudAPI;
+package com.wilsonality.animalscrudapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
