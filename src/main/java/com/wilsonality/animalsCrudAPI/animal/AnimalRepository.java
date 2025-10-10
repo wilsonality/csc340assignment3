@@ -15,7 +15,7 @@ public interface AnimalRepository extends JpaRepository<Animal, Long> {
     @Query
     List<Animal> getAnimalsByNameContainingIgnoreCase(String name);
 
-    @Query(value = "select * from coolanimals s where a.habitat like %ocean%", nativeQuery = true)
+    @Query(value = "select * from animals a where a.habitat like %ocean%", nativeQuery = true)
     List<Animal> getMarineAnimals();
 
 }
