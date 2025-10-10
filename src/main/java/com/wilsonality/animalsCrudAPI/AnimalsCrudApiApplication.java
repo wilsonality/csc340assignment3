@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AnimalsCrudApiApplication {
+public class AnimalscrudapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AnimalsCrudApiApplication.class, args);
+		SpringApplication.run(AnimalscrudapiApplication.class, args);
 	}
 
 }
