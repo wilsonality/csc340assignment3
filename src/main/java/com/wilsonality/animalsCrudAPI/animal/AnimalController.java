@@ -115,6 +115,9 @@ public class AnimalController {
      * Endpoint to read animal from a JSON file
      * @return content of JSON file
      */
-
+    @GetMapping("/animals/readFile")
+    public Object readJSON(){
+        return animalService.readJSON();
+    }
 
 }

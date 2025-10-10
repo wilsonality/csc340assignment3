@@ -20,27 +20,23 @@ public class Animal{
   private String description;
 
   private int lifespan;
-  
-  private String order;
 
   private String habitat;
 
   public Animal(){}
 
-  public Animal(Long animalID, String name, String description, int lifespan, String order, String habitat){
+  public Animal(Long animalID, String name, String description, int lifespan, String habitat){
     this.animalID = animalID;
     this.name = name;
     this.description = description;
     this.lifespan = lifespan;
-    this.order = order;
     this.habitat = habitat;
   }
 
-  public Animal(String name, String description, int lifespan, String order, String habitat){
+  public Animal(String name, String description, int lifespan, String habitat){
     this.name = name;
     this.description = description;
     this.lifespan = lifespan;
-    this.order = order;
     this.habitat = habitat;
   }
 
@@ -74,14 +70,6 @@ public class Animal{
 
   public void setLifespan(int nLifespan){
     this.lifespan = nLifespan;
-  }
-
-  public String getOrder(){
-    return order;
-  }
-
-  public void setOrder(String nOrder){
-    this.order = nOrder;
   }
 
   public String getHabitat(){

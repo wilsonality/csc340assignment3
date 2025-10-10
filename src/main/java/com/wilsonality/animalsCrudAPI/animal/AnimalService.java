@@ -44,7 +44,7 @@ public class AnimalService{
         
     } */
     public List<Animal> getAnimalsbyName(String name){
-        return animalRepository.getAnimalsbyNameContainingIgnoreCase(name);
+        return animalRepository.getAnimalsByNameContainingIgnoreCase(name);
     }
 
 
@@ -54,7 +54,7 @@ public class AnimalService{
      * @return the animals with the specified habitat
      */
     public List<Animal> getAnimalsbyHabitat(String habitat){
-        return animalRepository.getAnimalsbyHabitatContainingIgnoreCase(habitat);
+        return animalRepository.getAnimalsByHabitatContainingIgnoreCase(habitat);
     }
 
     /**

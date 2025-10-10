@@ -10,10 +10,10 @@ import org.springframework.stereotype.Repository;
 public interface AnimalRepository extends JpaRepository<Animal, Long> {
 
     @Query
-    List<Animal> getAnimalsbyHabitatContainingIgnoreCase(String habitat);
+    List<Animal> getAnimalsByHabitatContainingIgnoreCase(String habitat);
 
     @Query
-    List<Animal> getAnimalsbyNameContainingIgnoreCase(String name);
+    List<Animal> getAnimalsByNameContainingIgnoreCase(String name);
 
     @Query(value = "select * from coolanimals s where a.habitat like %ocean%", nativeQuery = true)
     List<Animal> getMarineAnimals();
