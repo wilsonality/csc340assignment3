@@ -26,6 +26,8 @@ Simple CRUD API for Animal Objects with JPA (Hibernate)
     - Paste it as a value for the property `spring.datasource.url`. No quotation marks.
 - Build and run the main class. You should see a new table created in the Neon database.
 
+Demo ['[https://uncg-my.sharepoint.com/:v:/g/personal/tngachunga_uncg_edu/EehKRDNbycRPv2Vq1QmbcaoBBICpHAPtVF-1cvahVcfGrQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&email=SENTINI%40uncg.edu&e=8Ot5de](https://uncg-my.sharepoint.com/:v:/g/personal/tngachunga_uncg_edu/EehKRDNbycRPv2Vq1QmbcaoByvziIYXff-IIrRU6_k-Uag?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=v6Y29f)']
+
 ## API Endpoints
 Base URL: [`http://localhost:8080/animals`](http://localhost:8080/animals)
 
