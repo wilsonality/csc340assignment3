@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -44,9 +43,9 @@ public class AnimalController {
       * @return animals with matching names, or all animals if none
       */
      @GetMapping("/animals/name")
-     public Object getAnimalbyName(@RequestParam String key){
-        if (key != null){
-            return animalService.getAnimalsbyName(key);
+     public Object getAnimalbyName(@PathVariable String name){
+        if (name != null){
+            return animalService.getAnimalsbyName(name);
         }
         else{
             return animalService.getAllAnimals();
@@ -58,7 +57,7 @@ public class AnimalController {
      * @return animals with matching habitat
      */
     @GetMapping("/animals/habitat/{habitat}")
-    public Object getAnimalsbyHabitat(@RequestParam String habitat){
+    public Object getAnimalsbyHabitat(@PathVariable String habitat){
         return animalService.getAnimalsbyHabitat(habitat);
     }
 
