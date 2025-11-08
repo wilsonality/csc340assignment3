@@ -25,8 +25,7 @@ public class AnimalController {
     public Object getAllAnimals(Model model){
         model.addAttribute("animalslist", animalService.getAllAnimals());
         model.addAttribute("title", "All Animals");
-        
-        return "animals-list"; // view name
+        return "animals-list";
     }
 
     /**
@@ -36,12 +35,12 @@ public class AnimalController {
      * @return the animal with the special ID
      */
 
-     @GetMapping("/animals/{animalID}")
+     @GetMapping("/animals/id/{animalID}")
      public Object getAnimalsbyID(@PathVariable long animalID, Model model){
         // return animalService.getAnimalbyID(animalID);
         model.addAttribute("animal", animalService.getAnimalbyID(animalID));
-        model.addAttribute("title", "Animal #: " + animalID);
-        return "animals-details";
+        model.addAttribute("title", animalService.getAnimalbyID(animalID).getName());
+        return "animal-details";
      }
 
      /**
@@ -50,8 +49,8 @@ public class AnimalController {
       * @param model The model to add attributes to
       * @return animals with matching names, or all animals if none
       */
-     @GetMapping("/animals/name")
-     public Object getAnimalbyName(@PathVariable String name, Model model){
+     @GetMapping("/animals/name/{name}")
+     public Object getAnimalbyName(@RequestParam String name, Model model){
         if (name != null){
             model.addAttribute("animal", animalService.getAnimalsbyName(name));
             model.addAttribute("title", ("Search for \"" + name + "\""));
@@ -114,13 +113,14 @@ public class AnimalController {
     /** Endpoint to show the update form for an animal
      * 
      * @param model The model to add attributes to
+     * @param animalID id of the animal to update
      * @return
      */
     @GetMapping("/animals/updateForm/{animalID}")
-    public Object showUpdateForm(Model model){
-        Animal nAnimal = new Animal();
-        model.addAttribute("animal", nAnimal);
-        model.addAttribute("title", "Create New Animal");
+    public Object showUpdateForm(Model model, @PathVariable long animalID){
+        Animal animal = animalService.getAnimalbyID(animalID);
+        model.addAttribute("animal", animal);
+        model.addAttribute("title", "Update Animal");
         return "animals-update";
     }
 
