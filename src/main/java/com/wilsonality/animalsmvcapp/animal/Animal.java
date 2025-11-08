@@ -1,4 +1,4 @@
-package com.wilsonality.animalscrudapi.animal;
+package com.wilsonality.animalsmvcapp.animal;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,21 +23,27 @@ public class Animal{
 
   private String habitat;
 
+  private String animalPicturePath;
+  
+  
+
   public Animal(){}
 
-  public Animal(Long animalID, String name, String description, int lifespan, String habitat){
+  public Animal(Long animalID, String name, String description, int lifespan, String habitat, String animalPicturePath){
     this.animalID = animalID;
     this.name = name;
     this.description = description;
     this.lifespan = lifespan;
     this.habitat = habitat;
+    this.animalPicturePath = animalPicturePath;
   }
 
-  public Animal(String name, String description, int lifespan, String habitat){
+  public Animal(String name, String description, int lifespan, String habitat, String animalPicturePath){
     this.name = name;
     this.description = description;
     this.lifespan = lifespan;
     this.habitat = habitat;
+    this.animalPicturePath = animalPicturePath;
   }
 
   public Long getAnimalID(){
@@ -78,5 +84,13 @@ public class Animal{
 
   public void setHabitat(String nHabitat){
     this.habitat = nHabitat;
+  }
+
+  public String getAnimalPicturePath(){
+    return animalPicturePath;
+  }
+  
+  public void setAnimalPicturePath(String nAnimalPicturePath){
+    this.animalPicturePath = nAnimalPicturePath;
   }
 }
